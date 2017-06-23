@@ -184,9 +184,10 @@ def get_W(word_vecs, k=300):
     return W, word_idx_map
 
 if __name__ == '__main__':
-    w2v_file = sys.argv[1]
+    w2v_file = sys.argv[1] # w2v pretrain file
+    sst_folder = sys.argv[2] # sst folder
     print 'load corpus'
-    phrases, sentences, vocab = read_su_sentiment_rotten_tomatoes('./data/stanfordSentimentTreebank')
+    phrases, sentences, vocab = read_su_sentiment_rotten_tomatoes(sst_folder)
     print 'load word2vec'
     max_l = np.max([len(s.words) for s in sentences])
     print "number of sentences: " + str(len(sentences))

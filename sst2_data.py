@@ -1,6 +1,6 @@
 import cPickle
 import numpy as np
-from process_sst_data import SentimentPhrase
+from process_sst2_data import SentimentPhrase
 
 def get_idx_from_sent(sent, word_idx_map, max_l=51, k=300, filter_h=5, pad_left=True):
     """
